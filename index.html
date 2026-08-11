@@ -1,291 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel F. Prado - PhD Candidate in Mathematics</title>
-    <meta name="description" content="Academic website of Manuel F. Prado Ceballos, PhD candidate in Mathematics specializing in Control Theory, Inverse Problems, and SPDEs.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manuel F. Prado Ceballos | Home</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
     
-    <!-- System fonts for maximum performance and compatibility globally -->
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #222222;
-            --link-color: #0056b3;
-            --link-hover: #003d80;
-            --meta-color: #666666;
-            --border-color: #e5e5e5;
-            --max-width: 800px;
-        }
+    /* Contenedor principal de dos columnas */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 40px 20px;
-        }
+    /* Columna izquierda (Foto y Bio corta) */
+    .sidebar {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
 
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-        }
+    .profile-img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 8px; /* Cambia a 50% si quieres la foto totalmente redonda */
+      display: block;
+      margin-bottom: 15px;
+    }
 
-        /* Header / Personal Info */
-        header {
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 1.4em;
+    }
 
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin: 0 0 0.5rem 0;
-            letter-spacing: -0.02em;
-        }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--meta-color);
-            margin-bottom: 1rem;
-        }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
 
-        .links {
-            font-size: 0.95rem;
-        }
+    /* Columna derecha (Contenido principal) */
+    .main-content {
+      flex: 2 1 500px;
+    }
 
-        .links a {
-            color: var(--link-color);
-            text-decoration: none;
-            margin-right: 15px;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-            color: var(--link-hover);
-        }
-
-        /* Section Styling */
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            border-bottom: 2px solid var(--text-color);
-            padding-bottom: 0.3rem;
-            margin-bottom: 1.2rem;
-            margin-top: 0;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        li {
-            margin-bottom: 0.8rem;
-        }
-
-        /* Items (Pubs, Talks, etc.) */
-        .pub-title {
-            font-weight: 600;
-        }
-
-        .pub-authors {
-            color: var(--text-color);
-        }
-
-        .pub-journal {
-            font-style: italic;
-        }
-
-        .meta-tag {
-            font-size: 0.85rem;
-            color: var(--meta-color);
-        }
-
-        .doi-link {
-            font-size: 0.85rem;
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        .doi-link:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 4rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            color: var(--meta-color);
-            text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 20px 15px;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    h1 { margin-bottom: 5px; }
+    h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 30px; }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- HEADER -->
-        <header>
-            <h1>Manuel F. Prado Ceballos</h1>
-            <div class="subtitle">
-                Ph.D. Candidate in Mathematics | Universidad Técnica Federico Santa María
-            </div>
-            <div class="links">
-                <a href="mailto:mprado@usm.cl">Email</a>
-                <a href="https://orcid.org/0009-0008-3918-3891" target="_blank" rel="noopener">ORCID</a>
-                <a href="https://www.researchgate.net/profile/Manuel-Prado-8" target="_blank" rel="noopener">ResearchGate</a>
-                <!-- Link to your PDF CV uploaded in the same repo -->
-                <a href="CV_Manuel_Prado.pdf" target="_blank">CV (PDF)</a>
-            </div>
-        </header>
+  <div class="container">
 
-        <!-- ABOUT ME -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am a Ph.D. candidate in Mathematics in the Joint Graduate Program (UV-PUCV-USM) in Chile, supervised by Prof. Rodrigo Lecaros (UTFSM) and co-supervised by Prof. Ariel Pérez (UBB). My work lies at the intersection of control theory, inverse problems, and stochastic partial differential equations (SPDEs).
-            </p>
-            <p>
-                My research focuses on the development of Carleman estimates adapted to semi-discrete stochastic operators in arbitrary dimensions, with applications to observability inequalities, null controllability, and inverse random source and Cauchy problems.
-            </p>
-            <p><strong>Research Interests:</strong> Inverse Problems, Controllability, Carleman Estimates, and Stochastic Partial Differential Equations (SPDEs).</p>
-        </section>
+    <!-- COLUMNA IZQUIERDA: Foto, nombre y enlaces -->
+    <aside class="sidebar">
+      <!-- Asegúrate de que el archivo tenga exactamente este nombre -->
+      <img src="photo.jpg" alt="Manuel F. Prado" class="profile-img">
 
-        <!-- PUBLICATIONS -->
-        <section id="publications">
-            <h2>Research Publications</h2>
-            
-            <h3>Journal Articles</h3>
-            <ul>
-                <li>
-                    <span class="pub-authors">R. Lecaros, A. A. Pérez, and <strong>M. F. Prado</strong></span>,
-                    <span class="pub-title">"Inverse random source and cauchy problems for semi-discrete stochastic parabolic equations in arbitrary dimensions,"</span>
-                    <span class="pub-journal">Inverse Problems</span>, vol. 42, no. 7, p. 075001, 2026.
-                    <br>
-                    <a class="doi-link" href="https://doi.org/10.1088/1361-6420/ae7c2c" target="_blank">[DOI: 10.1088/1361-6420/ae7c2c]</a>
-                </li>
-                <li>
-                    <span class="pub-authors">R. Lecaros, A. A. Pérez, and <strong>M. F. Prado</strong></span>,
-                    <span class="pub-title">"Carleman estimate for semi-discrete stochastic parabolic operators in arbitrary dimension and applications to controllability,"</span>
-                    <span class="pub-journal">Applied Mathematics and Optimization</span>, vol. 93, no. 1, p. 12, 2026.
-                    <br>
-                    <a class="doi-link" href="https://doi.org/10.1007/s00245-025-10364-1" target="_blank">[DOI: 10.1007/s00245-025-10364-1]</a>
-                </li>
-            </ul>
+      <h2>Manuel F. Prado</h2>
+      <p>PhD Student in Mathematics</p>
+      <p><em>Universidad Técnica Federico Santa María</em></p>
 
-            <h3>Submitted Manuscripts & Preprints</h3>
-            <ul>
-                <li>
-                    <span class="pub-authors">R. Lecaros, A. A. Pérez, and <strong>M. F. Prado</strong></span>,
-                    <span class="pub-title">"Controllability for semi-discrete semilinear stochastic parabolic operators,"</span>
-                    <span class="pub-journal">Submitted to SIAM Journal on Control and Optimization (SICON)</span>, 2026.
-                    <br>
-                    <a class="doi-link" href="https://arxiv.org/abs/2604.05155" target="_blank">[arXiv: 2604.05155]</a>
-                </li>
-            </ul>
-        </section>
+      <h3>Contacto & Links</h3>
+      <ul>
+        <li>📧 <a href="mailto:mprado@usm.cl">Email</a></li>
+        <li>📄 <a href="CV_ManuelPrado.pdf" target="_blank">Curriculum Vitae (PDF)</a></li>
+        <li>🆔 <a href="https://orcid.org/0000-0002-8326-160X" target="_blank">ORCID</a></li>
+        <li>🌐 <a href="https://www.researchgate.net" target="_blank">ResearchGate</a></li>
+      </ul>
+    </aside>
 
-        <!-- TALKS & CONFERENCES -->
-        <section id="conferences">
-            <h2>Conferences & Talks</h2>
-            
-            <h3>2026</h3>
-            <ul>
-                <li>
-                    <strong>Speaker:</strong> <em>Inverse Random Source and Cauchy Problems for Semi-Discrete Stochastic Parabolic Equations in Arbitrary Dimensions</em>. XXXVIII Jornada de Matemática de la Zona Sur (JMZS 2026), Universidad del Bío-Bío, Concepción, Chile.
-                </li>
-                <li>
-                    <strong>Poster Presentation:</strong> <em>Inverse problems for the semidiscrete stochastic parabolic equations</em>. Inverse Problems in the Physical Sciences (IPPhys2026) Summer School, Puerto Varas, Chile.
-                </li>
-            </ul>
+    <!-- COLUMNA DERECHA: Secciones de contenido -->
+    <main class="main-content">
+      
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am a PhD Candidate in Mathematics at the Universidad Técnica Federico Santa María (USM). My research focuses on <strong>control theory, inverse problems, and stochastic partial differential equations (SPDEs)</strong>, including Carleman estimates and parabolic operators.</p>
+      </section>
 
-            <h3>2025</h3>
-            <ul>
-                <li>
-                    <strong>Speaker:</strong> <em>Inverse Problems for Semidiscrete Stochastic Parabolic Equations: Carleman Estimates and Stability Results</em>. XCIII Encuentro Anual de la Sociedad de Matemática de Chile (SOMACHI 2025), Vicuña, Chile.
-                </li>
-                <li>
-                    <strong>Invited Speaker:</strong> <em>Carleman estimate for semi-discrete stochastic parabolic operators in arbitrary dimension and applications to controllability</em>. 2nd Colombian Workshop on Nonlinear Dispersive Equations, Universidad del Valle, Cali, Colombia.
-                </li>
-                <li>
-                    <strong>Speaker:</strong> <em>Las estimaciones de Carleman en el contexto estocástico y semidiscreto</em>. CONVImaTE 2025: Seminario especial de egresados y estudiantes de Matemáticas, Universidad del Valle, Cali, Colombia.
-                </li>
-                <li>
-                    <strong>Invited Participant:</strong> Summer School "Control, Inverse Problems and Spectral Theory", Graduate School MINT, Toulouse, France.
-                </li>
-            </ul>
-        </section>
+      <!-- NUEVA SECCIÓN DE PUBLICACIONES -->
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            <strong>Carleman estimate for semi-discrete stochastic parabolic operators in arbitrary dimension and applications to controllability</strong>.<br>
+            Applied Mathematics and Optimization (2025).
+          </li>
+          <li>
+            <strong>Inverse Random Source and Cauchy Problems for Semi-Discrete Stochastic Parabolic Equations in Arbitrary Dimensions</strong>.<br>
+            Inverse Problems (2026).
+          </li>
+        </ul>
+      </section>
 
-        <!-- TEACHING -->
-        <section id="teaching">
-            <h2>Teaching Experience</h2>
-            <ul>
-                <li>
-                    <strong>Part-time Lecturer</strong> (2024 – Present)<br>
-                    <span class="meta-tag">Department of Mathematics, Universidad Técnica Federico Santa María (San Joaquín Campus, Chile)</span>
-                </li>
-                <li>
-                    <strong>Teaching Assistant</strong> (2023 – 2024)<br>
-                    <span class="meta-tag">Department of Mathematics, Universidad Técnica Federico Santa María (Central Campus, Chile)</span>
-                </li>
-                <li>
-                    <strong>Teaching Assistant</strong> (2021 – 2022)<br>
-                    <span class="meta-tag">Department of Mathematics, Universidad del Valle (Central Campus, Colombia)</span>
-                </li>
-            </ul>
-        </section>
+      <!-- NUEVA SECCIÓN AGREGADA (Ejemplo: Talks / Eventos) -->
+      <section id="talks">
+        <h2>Talks & Conferences</h2>
+        <ul>
+          <li>
+            <strong>XXXVIII Jornada de Matemática de la Zona Sur (JMZS)</strong>, Universidad del Bío-Bío, Concepción, Chile (2026).
+          </li>
+          <li>
+            <strong>XCIII Encuentro Anual SOMACHI</strong>, Vicuña, Chile (2025).
+          </li>
+        </ul>
+      </section>
 
-        <!-- EDUCATION -->
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>Ph.D. in Mathematics</strong> (2023 – Present)<br>
-                    <span class="meta-tag">Consortium UV-PUCV-USM, Chile</span><br>
-                    <em>Project:</em> Carleman estimate for semi-discrete stochastic parabolic operators in arbitrary dimension and its applications.<br>
-                    <em>Advisor:</em> Rodrigo Lecaros | <em>Co-Advisor:</em> Ariel Pérez.
-                </li>
-                <li>
-                    <strong>M.Sc. in Mathematical Sciences</strong> (2022 – 2023)<br>
-                    <span class="meta-tag">Universidad del Valle, Colombia</span><br>
-                    <em>Thesis:</em> A unique continuation property for a linearization of the ab-Boussinesq equation with space-dependent potential.<br>
-                    <em>Advisor:</em> José Raúl Quintero.
-                </li>
-                <li>
-                    <strong>B.Sc. in Mathematics</strong> (2015 – 2021)<br>
-                    <span class="meta-tag">Universidad del Valle, Colombia</span><br>
-                    <em>Thesis:</em> Unique continuation property for a linearization of the BBM equation with space-dependent potential.
-                </li>
-            </ul>
-        </section>
+    </main>
 
-        <!-- FOOTER -->
-        <footer>
-            <p>&copy; Manuel Fernando Prado Ceballos — Hosted on GitHub Pages</p>
-        </footer>
-
-    </div>
+  </div>
 
 </body>
 </html>
