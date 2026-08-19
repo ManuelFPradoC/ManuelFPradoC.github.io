@@ -6,60 +6,122 @@
   <title>Manuel F. Prado Ceballos | Home</title>
   <style>
     /* Estilos generales */
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    /* Contenedor principal de dos columnas */
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-top: 20px;
-    }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    /* Columna izquierda (Foto y Bio corta) */
-    .sidebar {
-      flex: 1 1 250px;
-      max-width: 300px;
-    }
+/* Contenedor principal de dos columnas */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
 
-    .profile-img {
-      width: 100%;
-      max-width: 240px;
-      border-radius: 8px; /* Cambia a 50% si quieres la foto totalmente redonda */
-      display: block;
-      margin-bottom: 15px;
-    }
+/* Columna izquierda */
+.sidebar {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
 
-    .sidebar h2 {
-      margin-top: 0;
-      font-size: 1.4em;
-    }
+/* Foto de perfil: bordes suaves y sombra discreta */
+.profile-img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e4e8;
+  display: block;
+  margin-bottom: 15px;
+}
 
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-    }
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #1a252f;
+}
 
-    .sidebar li {
-      margin-bottom: 8px;
-    }
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
 
-    /* Columna derecha (Contenido principal) */
-    .main-content {
-      flex: 2 1 500px;
-    }
+.sidebar li {
+  margin-bottom: 8px;
+}
 
-    h1 { margin-bottom: 5px; }
-    h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 30px; }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+/* Columna derecha */
+.main-content {
+  flex: 2 1 500px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+h2 {
+  border-bottom: 2px solid #e1e4e8;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  color: #1a252f;
+}
+
+/* Paleta de colores armonizada: Azul marino profundo */
+a {
+  color: #1b365d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0d1b2a;
+  text-decoration: underline;
+}
+
+/* Botones rectangulares pequeños con sombra suave */
+.pill-btn {
+  padding: 4px 10px;
+  background-color: #f8fafc;
+  color: #1b365d;
+  border: 1px solid #cbd5e1;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.pill-btn:hover {
+  background-color: #1b365d;
+  color: #ffffff;
+  border-color: #1b365d;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(27, 54, 93, 0.2);
+}
+
+.sidebar p {
+  font-size: 0.9em;
+  color: #555;
+}
+  /* Foto de perfil con bordes suaves y sombra */
+.profile-img {
+  width: 100%;
+  max-width: 240px; /* o el tamaño que prefieras */
+  display: block;
+  margin: 0 auto 15px auto; /* Centrado con margen inferior */
+  
+  /* ESTOS SON LOS CAMBIOS PARA LA SUGERENCIA 2 */
+  border-radius: 12px; /* Esquinas redondeadas suaves */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra difuminada */
+  border: 1px solid #e1e4e8; /* Borde muy fino opcional */
+}
   </style>
 </head>
 <body>
@@ -73,10 +135,9 @@
 
       <h2>Manuel F. Prado</h2>
   <p><strong>PhD(c) Student in Mathematics</strong></p>
-  <p><em>Joint <a href="https://doctoradomat.uv.cl" target="_blank"> PhD Program UTFSM – UV – PUCV</a>]</em></p>
+  <p><em>Joint <a href="https://doctoradomat.uv.cl" target="_blank"> PhD Program UTFSM – UV – PUCV</a></em></p>
   
-  <p style="font-size: 0.9em; color: #555;">
-    Universidad Técnica Federico Santa María<br>
+  <p> Universidad Técnica Federico Santa María<br>
     Universidad de Valparaíso<br>
     Pontificia Universidad Católica de Valparaíso
   </p>
@@ -98,10 +159,11 @@
       
       <section id="about">
         <h2>About Me</h2> 
-  <div style="margin: 15px 0; display: flex; gap: 6px; flex-wrap: wrap;">
-  <a href="#publications" style="padding: 3px 8px; background-color: #f0f4f8; color: #2b4c7e; border: 1px solid #d0d7de; border-radius: 2px; text-decoration: none; font-family: Arial, sans-serif; font-size: 12px; font-weight: 500;">Publications & Preprints</a>
-  <a href="#talks-events" style="padding: 3px 8px; background-color: #f0f4f8; color: #2b4c7e; border: 1px solid #d0d7de; border-radius: 2px; text-decoration: none; font-family: Arial, sans-serif; font-size: 12px; font-weight: 500;">Talks & Events</a>
-  <a href="#service" style="padding: 3px 8px; background-color: #f0f4f8; color: #2b4c7e; border: 1px solid #d0d7de; border-radius: 2px; text-decoration: none; font-family: Arial, sans-serif; font-size: 12px; font-weight: 500;">Academic Service</a>
+        
+<div style="margin: 15px 0; display: flex; gap: 8px; flex-wrap: wrap;">
+  <a href="#publications" class="pill-btn">Publications & Preprints</a>
+  <a href="#talks-events" class="pill-btn">Talks & Events</a>
+  <a href="#service" class="pill-btn">Academic Service</a>
 </div>
         <p>I am a PhD Candidate in Mathematics at joint doctoral program between <strong>UTFSM</strong>, <strong>UV</strong> and <strong>PUCV</strong>. My research focuses on <strong>control theory, inverse problems, and stochastic partial differential equations (SPDEs).</strong></p>
       </section>
