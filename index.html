@@ -123,48 +123,47 @@
     .pub-list li, .talk-list li {
       margin-bottom: 12px;
     }
-
 /* --- ESTILOS PARA MODO OSCURO --- */
 body.dark-mode {
-  background-color: #121212 !  important;
-  color: #e0e0e0 !  important;
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
 }
 
 body.dark-mode .container,
 body.dark-mode nav {
-  background-color: #1e1e1e !  important;
-  border-color: #333 !  important;
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
 }
 
+/* Enlaces generales en modo oscuro */
 body.dark-mode a {
-  color: #82b1ff !  important; /* Color para enlaces en modo oscuro */
+  color: #82b1ff !important;
+}
+
+/* Corrección de contraste para la columna lateral (Sidebar) */
+body.dark-mode .sidebar,
+body.dark-mode .sidebar p,
+body.dark-mode .sidebar em,
+body.dark-mode .sidebar span,
+body.dark-mode .sidebar li {
+  color: #e0e6ed !important;
+}
+
+body.dark-mode .sidebar a {
+  color: #64b5f6 !important;
+  text-decoration: underline;
 }
 
 body.dark-mode .pill-btn {
-  background-color: #333 !  important;
-  color: #e0e0e0 !  important;
-  border-color: #444 !  important;
+  background-color: #333 !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
 }
 
 body.dark-mode .pill-btn:hover {
-  background-color: #444 !  important;
+  background-color: #444 !important;
 }
 
-/* Estilo para el botón de cambio */
-.dark-mode-toggle {
-  background: none;
-  border: 1px solid #ddd;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 20px;
-  font-size: 0.8em;
-  transition: all 0.3s ease;
-}
-
-body.dark-mode .dark-mode-toggle {
-  border-color: #555;
-  color: #e0e0e0;
-}    
   </style>
 </head>
 <body>
@@ -184,7 +183,7 @@ body.dark-mode .dark-mode-toggle {
 
     <!-- Botón de Modo Oscuro -->
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-      <span id="dark-mode-icon">🌙</span> Dark Mode
+      <span id="dark-mode-icon">🌙</span> Dark/Light Mode
     </button>
 
   </div>
