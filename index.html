@@ -124,21 +124,96 @@
       margin-bottom: 12px;
     }
 
-    
+/* --- ESTILOS PARA MODO OSCURO --- */
+body.dark-mode {
+  background-color: #121212 !  important;
+  color: #e0e0e0 !  important;
+}
+
+body.dark-mode .container,
+body.dark-mode nav {
+  background-color: #1e1e1e !  important;
+  border-color: #333 !  important;
+}
+
+body.dark-mode a {
+  color: #82b1ff !  important; /* Color para enlaces en modo oscuro */
+}
+
+body.dark-mode .pill-btn {
+  background-color: #333 !  important;
+  color: #e0e0e0 !  important;
+  border-color: #444 !  important;
+}
+
+body.dark-mode .pill-btn:hover {
+  background-color: #444 !  important;
+}
+
+/* Estilo para el botón de cambio */
+.dark-mode-toggle {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle {
+  border-color: #555;
+  color: #e0e0e0;
+}    
   </style>
 </head>
 <body>
-  <!-- AGREGAR ESTO JUSTO DEBAJO DE <body> -->
-<nav style="position: sticky; top: 0; background-color: #ffffff; padding: 12px 0; border-bottom: 1px solid #e1e4e8; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
-  <div style="max-width: 1000px; margin: 0 auto; display: flex; gap: 20px; font-weight: 500; font-size: 0.95em; padding: 0 20px;">
-    <a href="#about" style="color: #1b365d; text-decoration: none;">About</a>
-    <a href="#publications" style="color: #1b365d; text-decoration: none;">Publications</a>
-    <a href="#projects" style="color: #1b365d; text-decoration: none;">Grants & Projects</a>
-    <a href="#teaching" style="color: #1b365d; text-decoration: none;">Teaching</a>
-    <a href="#talks-events" style="color: #1b365d; text-decoration: none;">Talks</a>
-    <a href="#service" style="color: #1b365d; text-decoration: none;">Academic Service</a>
+
+  <!-- Barra de navegación con Botón de Modo Oscuro -->
+<nav style="position: sticky; top: 0; background-color: #ffffff; padding: 12px 0; border-bottom: 1px solid #e1e4e8; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); display: flex; justify-content: center;">
+  <div style="max-width: 1000px; width: 100%; display: flex; justify-content: space-between; align-items: center; font-weight: 500; font-size: 0.95em; padding: 0 20px;">
+    
+    <div style="display: flex; gap: 20px;">
+      <a href="#about" style="color: #1b365d; text-decoration: none;">About</a>
+      <a href="#publications" style="color: #1b365d; text-decoration: none;">Publications</a>
+      <a href="#projects" style="color: #1b365d; text-decoration: none;">Grants & Projects</a>
+      <a href="#teaching" style="color: #1b365d; text-decoration: none;">Teaching</a>
+      <a href="#talks-events" style="color: #1b365d; text-decoration: none;">Talks</a>
+      <a href="#service" style="color: #1b365d; text-decoration: none;">Academic Service</a>
+    </div>
+
+    <!-- Botón de Modo Oscuro -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+      <span id="dark-mode-icon">🌙</span> Visión Nocturna
+    </button>
+
   </div>
 </nav>
+
+<!-- SCRIPT PARA EL MODO OSCURO (poner justo antes de </body>) -->
+<script>
+  function toggleDarkMode() {
+    const body = document.body;
+    const icon = document.getElementById('dark-mode-icon');
+    
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+      icon.innerText = '☀️'; // Cambia a sol cuando está oscuro
+      localStorage.setItem('theme', 'dark'); // Guarda la preferencia
+    } else {
+      icon.innerText = '🌙'; // Cambia a luna cuando está claro
+      localStorage.setItem('theme', 'light'); // Guarda la preferencia
+    }
+  }
+
+  // Verifica la preferencia guardada al cargar la página
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('dark-mode-icon').innerText = '☀️';
+  }
+</script>
+  
 
   <div class="container">
 
